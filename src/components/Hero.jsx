@@ -8,10 +8,14 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Spline scene="https://prod.spline.design/4cHQr84zOGAHOehh/scene.splinecode" style={{ width: '100%', height: '100%' }} />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.35)_55%,rgba(0,0,0,0.6)_100%)]" />
+        <div className="pointer-events-none absolute inset-0 mix-blend-overlay opacity-40" style={{ backgroundImage: 'url("data:image/svg+xml;utf8,\
+          <svg xmlns=\'http://www.w3.org/2000/svg\' width=\'120\' height=\'120\' viewBox=\'0 0 120 120\'>\
+          <defs><radialGradient id=\'g\' cx=\'50%\' cy=\'50%\' r=\'70%\'><stop offset=\'0%\' stop-color=\'white\' stop-opacity=\'0.08\'/><stop offset=\'100%\' stop-color=\'white\' stop-opacity=\'0\'/></radialGradient></defs>\
+          <rect width=\'120\' height=\'120\' fill=\'url(%23g)\'/></svg>\n")' }} />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex min-h-[86vh] flex-col items-center justify-center text-center">
+        <div className="flex min-h-[90vh] flex-col items-center justify-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -22,7 +26,7 @@ export default function Hero() {
             Full‑Stack Developer • AI Enthusiast
           </motion.div>
 
-        <motion.h1
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.8 }}
@@ -71,10 +75,10 @@ export default function Hero() {
             <Badge icon={Brain} label="LLMs • RAG • Agents" />
             <Badge icon={Rocket} label="Ship fast, iterate" className="hidden sm:flex" />
           </motion.div>
-
-          <div className="pointer-events-none absolute -z-[0]" />
         </div>
       </div>
+
+      <div className="pointer-events-none absolute inset-x-0 -bottom-12 h-24 bg-gradient-to-b from-transparent to-slate-950" />
     </section>
   );
 }
